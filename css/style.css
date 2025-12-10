@@ -548,6 +548,12 @@ section {
     align-items: center;
     justify-content: center;
     box-shadow: var(--shadow-lg);
+    overflow: hidden;
+}
+
+/* Hide icon when background image is present */
+.image-placeholder[style*="background-image"] i {
+    display: none;
 }
 
 .image-placeholder i {
@@ -638,6 +644,85 @@ section {
 /* ===== Booking Section ===== */
 .booking {
     background: var(--light-gray);
+}
+
+.free-consult-card {
+    border: 3px solid var(--primary-blue);
+    position: relative;
+    padding-top: calc(var(--spacing-lg) + 20px);
+}
+
+.free-badge {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--primary-blue);
+    color: var(--white);
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: var(--shadow-md);
+}
+
+.consult-intro {
+    text-align: center;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--primary-blue);
+    margin-bottom: var(--spacing-md);
+}
+
+.consult-note {
+    margin-top: var(--spacing-md);
+    padding: var(--spacing-sm);
+    background: var(--light-gray);
+    border-radius: 10px;
+    text-align: center;
+    font-style: italic;
+    color: var(--medium-gray);
+    font-size: 0.95rem;
+}
+
+.next-steps {
+    list-style: none;
+    counter-reset: step-counter;
+    padding-left: 0;
+}
+
+.next-steps li {
+    counter-increment: step-counter;
+    padding: 0.75rem 0;
+    padding-left: 3rem;
+    position: relative;
+    color: var(--medium-gray);
+}
+
+.next-steps li::before {
+    content: counter(step-counter);
+    position: absolute;
+    left: 0;
+    top: 0.5rem;
+    width: 2rem;
+    height: 2rem;
+    background: var(--primary-blue);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.next-steps li strong {
+    color: var(--black);
 }
 
 .booking-content {

@@ -23,30 +23,37 @@ document.addEventListener('DOMContentLoaded', function() {
     // Smooth scroll to sections and update active nav link
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            // Remove active class from all links
-            navLinks.forEach(l => l.classList.remove('active'));
-            
-            // Add active class to clicked link
-            this.classList.add('active');
-            
             // Get target section
             const targetId = this.getAttribute('href');
-            const targetSection = document.querySelector(targetId);
             
-            if (targetSection) {
-                // Close mobile menu if open
+            // Only prevent default and smooth scroll for internal hash links
+            if (targetId.startsWith('#')) {
+                const targetSection = document.querySelector(targetId);
+                
+                if (targetSection) {
+                    e.preventDefault();
+                    
+                    // Remove active class from all links
+                    navLinks.forEach(l => l.classList.remove('active'));
+                    
+                    // Add active class to clicked link
+                    this.classList.add('active');
+                    
+                    // Close mobile menu if open
+                    navLinksContainer.classList.remove('active');
+                    
+                    // Scroll to section with offset for fixed navbar
+                    const navbarHeight = navbar.offsetHeight;
+                    const targetPosition = targetSection.offsetTop - navbarHeight;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            } else {
+                // For external links (pricing.html, faq.html), close mobile menu
                 navLinksContainer.classList.remove('active');
-                
-                // Scroll to section with offset for fixed navbar
-                const navbarHeight = navbar.offsetHeight;
-                const targetPosition = targetSection.offsetTop - navbarHeight;
-                
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                });
             }
         });
     });
@@ -85,12 +92,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const successModal = document.getElementById('successModal');
     const closeModalBtn = document.getElementById('closeModal');
     
-    // Set minimum date to today
-    const dateInput = document.getElementById('date');
-    if (dateInput) {
-        const today = new Date().toISOString().split('T')[0];
-        dateInput.setAttribute('min', today);
-    }
+    // Form setup (removed date validation as we're using availability dropdown)
     
     // Handle form submission
     bookingForm.addEventListener('submit', function(e) {
@@ -101,10 +103,10 @@ document.addEventListener('DOMContentLoaded', function() {
             name: document.getElementById('name').value,
             email: document.getElementById('email').value,
             phone: document.getElementById('phone').value,
-            service: document.getElementById('service').value,
-            date: document.getElementById('date').value,
-            time: document.getElementById('time').value,
+            interest: document.getElementById('interest').value,
+            availability: document.getElementById('availability').value,
             goals: document.getElementById('goals').value,
+            consultationType: 'Free 15-minute consultation',
             timestamp: new Date().toISOString()
         };
         
@@ -194,10 +196,10 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // ===== Service Selection Highlight =====
-    const serviceSelect = document.getElementById('service');
-    if (serviceSelect) {
-        serviceSelect.addEventListener('change', function() {
+    // ===== Interest Selection Highlight =====
+    const interestSelect = document.getElementById('interest');
+    if (interestSelect) {
+        interestSelect.addEventListener('change', function() {
             if (this.value) {
                 this.style.borderColor = 'var(--primary-blue)';
             } else {
@@ -303,14 +305,26 @@ function formatTime(timeString) {
     return `${displayHour}:${minutes} ${ampm}`;
 }
 
-// Get service name from value
-function getServiceName(serviceValue) {
-    const serviceNames = {
+// Get interest name from value
+function getInterestName(interestValue) {
+    const interestNames = {
         'in-person': '1-on-1 In-Person Training',
         'virtual': 'Virtual Training',
-        'programming': 'Personalized Programming'
+        'programming': 'Personalized Programming',
+        'not-sure': 'Not Sure Yet'
     };
-    return serviceNames[serviceValue] || serviceValue;
+    return interestNames[interestValue] || interestValue;
+}
+
+// Get availability name from value
+function getAvailabilityName(availabilityValue) {
+    const availabilityNames = {
+        'morning': 'Morning (6 AM - 12 PM)',
+        'afternoon': 'Afternoon (12 PM - 5 PM)',
+        'evening': 'Evening (5 PM - 8 PM)',
+        'flexible': 'Flexible'
+    };
+    return availabilityNames[availabilityValue] || availabilityValue;
 }
 
 // ===== Export for testing (if needed) =====
@@ -318,6 +332,7 @@ if (typeof module !== 'undefined' && module.exports) {
     module.exports = {
         formatDate,
         formatTime,
-        getServiceName
+        getInterestName,
+        getAvailabilityName
     };
 }
