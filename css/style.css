@@ -1,5 +1,5 @@
 /* ===================================
-   FreeBody Fitness - Main Stylesheet
+   FreeBody Performance - Main Stylesheet
    Color Scheme: Black, Blue, White
    =================================== */
 
@@ -373,6 +373,27 @@ section {
 /* ===== Services Section ===== */
 .services {
     background: var(--light-gray);
+}
+
+.services-cta {
+    text-align: center;
+    margin-top: var(--spacing-xl);
+    padding: var(--spacing-lg);
+    background: var(--white);
+    border-radius: 20px;
+    box-shadow: var(--shadow-md);
+}
+
+.services-cta h3 {
+    font-size: 2rem;
+    color: var(--black);
+    margin-bottom: var(--spacing-sm);
+}
+
+.services-cta p {
+    font-size: 1.125rem;
+    color: var(--medium-gray);
+    margin-bottom: var(--spacing-md);
 }
 
 .services-grid {

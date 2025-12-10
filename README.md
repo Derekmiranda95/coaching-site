@@ -1,20 +1,20 @@
-# FreeBody Fitness - Personal Training Website
+# FreeBody Performance - Personal Training Website
 
 **Tagline:** Move Freely, Live Fully
 
-A professional, modern website for Derek's personal training and coaching services, built with a clean black, blue, and white color scheme.
+A professional, modern website for Derek's personal training and coaching services at Sportslab NYC, built with a clean black, blue, and white color scheme.
 
 ---
 
 ## 🎯 Project Overview
 
-FreeBody Fitness is a comprehensive personal training website designed to showcase Derek's coaching services, accept bookings, and facilitate payment processing through Square. The site emphasizes pain-free movement, weight loss, nutrition coaching, and athletic performance training.
+FreeBody Performance is a comprehensive personal training website designed to showcase Derek's coaching services, accept bookings, and facilitate payment processing through Square. The site emphasizes pain-free movement, weight loss, nutrition coaching, and athletic performance training.
 
 ---
 
 ## ✨ Currently Completed Features
 
-### 🏠 **Homepage**
+### 🏠 **Homepage (index.html)**
 - **Hero Section** with compelling call-to-action and animated title
 - Professional gradient background with brand colors
 - Smooth scroll navigation
@@ -22,8 +22,8 @@ FreeBody Fitness is a comprehensive personal training website designed to showca
 
 ### 💪 **Services Section**
 - **Three Core Services:**
-  1. **1-on-1 In-Person Training** - Personalized hands-on coaching
-  2. **Virtual Training** (Featured) - Flexible online sessions
+  1. **1-on-1 In-Person Training** (Featured as "Most Popular") - Personalized hands-on coaching
+  2. **Virtual Training** - Flexible online sessions
   3. **Personalized Programming** - Custom workout and nutrition plans
 
 - **Three Specializations:**
@@ -31,12 +31,14 @@ FreeBody Fitness is a comprehensive personal training website designed to showca
   - Weight Loss & Nutrition Coaching
   - Athletic Performance Training
 
+- **Call-to-Action Button** linking to pricing page
+
 ### 👨‍💼 **About Section**
 - Derek's transformation story and coaching philosophy
 - Professional credentials display:
   - ACE Certified Personal Trainer
   - Precision Nutrition Level 1 Coach
-- Experience statistics with animated counters
+- 4+ years experience, 2 certifications, and 100% dedication integrated into bio
 - Professional image placeholder for coach photo
 
 ### 📅 **Booking System**
@@ -58,17 +60,58 @@ FreeBody Fitness is a comprehensive personal training website designed to showca
 - Ready for Square payment URL integration
 
 ### 📞 **Contact Section**
-- Email contact card
-- Phone number display
-- Location information
+- **Email:** Derekmpt@gmail.com
+- **Phone:** (929) 374-4005
+- **Location:** Sportslab NYC
+  - 295 Madison Ave, Basement Level
+  - Entrance on E 41st between Madison Ave and Park Ave
 - Hover animations for engagement
+
+### 💰 **Pricing Page (pricing.html)**
+- **Monthly Membership Tiers:**
+  - Performance (2×/week): $1,200/month (8 sessions)
+  - Elite (3×/week): $1,740/month (12 sessions)
+- **Flexible Options:**
+  - Flex Pack: $1,700 for 10 sessions (3-month expiration)
+  - Drop-In Session: $200 per session
+- **Comprehensive Policies:**
+  - Banking Policy (30-day rollover, 8 session max)
+  - Cancellation Policy (12-hour notice)
+  - Pause Policy (once per quarter, 2 weeks max)
+  - Session Redemption details
+  - Sick day & travel guidelines
+- Beautiful card layouts with icons
+- Call-to-action buttons throughout
+
+### ❓ **FAQ Page (faq.html)**
+- **16 comprehensive FAQ items** covering:
+  - Why no once-a-week option
+  - Most popular membership tier
+  - Flexibility options
+  - Switching tiers
+  - Virtual session policies
+  - Session rollover rules
+  - Cancellation policies
+  - Pause policies
+  - Sick days and travel
+  - Membership vs Flex Pack differences
+  - Booking process
+  - Training location details
+  - What to bring to sessions
+  - Nutrition coaching availability
+  - Injury and pain management
+  - Membership cancellation process
+- **Interactive accordion** - click to expand/collapse answers
+- Well-organized with clear formatting
+- Call-to-action section
 
 ### 🔗 **Navigation**
 - Fixed top navigation with scroll effects
+- Links to: Home, Services, About, **Pricing**, **FAQ**, Book Now
 - Active page section highlighting
 - Smooth scroll to sections
 - Mobile-responsive hamburger menu
-- Logo with brand identity
+- Logo with brand identity (FreeBody PERFORMANCE)
 
 ### 🎨 **Design Features**
 - **Color Scheme:** Black (#000000), Blue (#0066FF), White (#FFFFFF)
@@ -92,31 +135,42 @@ FreeBody Fitness is a comprehensive personal training website designed to showca
 
 ## 🚀 Functional Entry URIs (Pages/Sections)
 
-### Main Navigation Routes:
+### Main Pages:
+- **`index.html`** - Homepage with all main sections
+- **`pricing.html`** - Complete pricing structure and membership tiers
+- **`faq.html`** - Frequently asked questions with accordion
+
+### Homepage Sections (index.html):
 - **`#home`** - Hero section with main call-to-action
 - **`#services`** - Services and specializations display
 - **`#about`** - About Derek and credentials
 - **`#booking`** - Booking form and calendar
-- **`#contact`** - Contact information
+- **`#contact`** - Contact information (Sportslab NYC)
 
 ### Interactive Features:
 - **Booking Form Submission** - Stored in localStorage (development)
 - **Mobile Menu Toggle** - Responsive navigation
 - **Modal Display** - Success confirmation after booking
 - **Smooth Scroll** - Animated section navigation
+- **FAQ Accordion** - Expandable question/answer sections
 
 ---
 
 ## 📁 Project Structure
 
 ```
-freebody-fitness/
+freebody-performance/
 │
-├── index.html              # Main HTML file
+├── index.html              # Homepage
+├── pricing.html            # Pricing & membership structure
+├── faq.html                # Frequently asked questions
 ├── css/
-│   └── style.css          # Main stylesheet (21KB+)
+│   ├── style.css          # Main stylesheet (21KB+)
+│   ├── pricing.css        # Pricing page styles
+│   └── faq.css            # FAQ page styles
 ├── js/
-│   └── main.js            # JavaScript functionality (11KB+)
+│   ├── main.js            # Main JavaScript functionality
+│   └── faq.js             # FAQ accordion functionality
 └── README.md              # This file
 ```
 
@@ -222,20 +276,16 @@ Open `index.html` and find the footer section (around line 430). Replace the `#`
 
 ## 📧 Contact Information
 
-### To Update Contact Details:
+**Current contact details (already configured):**
 
-Open `index.html` and find the contact section (around line 380). Update:
+- **Email:** Derekmpt@gmail.com
+- **Phone:** (929) 374-4005
+- **Location:** Sportslab NYC
+  - 295 Madison Ave, Basement Level
+  - Entrance on E 41st between Madison Ave and Park Ave
+  - New York, NY
 
-```html
-<!-- Email -->
-<p><a href="mailto:derek@freebodyfitness.com">derek@freebodyfitness.com</a></p>
-
-<!-- Phone -->
-<p><a href="tel:+1234567890">(123) 456-7890</a></p>
-
-<!-- Location -->
-<p>Your City, State</p>
-```
+These are already set up in the website! No changes needed unless you want to update them later.
 
 ---
 
@@ -359,7 +409,7 @@ Tested and optimized for:
 
 ## 📄 License
 
-Copyright © 2024 FreeBody Fitness. All rights reserved.
+Copyright © 2024 FreeBody Performance. All rights reserved.
 
 ---
 
@@ -390,7 +440,7 @@ Copyright © 2024 FreeBody Fitness. All rights reserved.
 ## 📞 Support
 
 For questions or issues with this website:
-- **Email:** derek@freebodyfitness.com
+- **Email:** derek@freebodyperformance.com
 - **Phone:** (123) 456-7890
 
 ---
@@ -408,4 +458,4 @@ No manual deployment steps required!
 
 ---
 
-**Built with 💪 by FreeBody Fitness - Move Freely, Live Fully**
+**Built with 💪 by FreeBody Performance - Move Freely, Live Fully**
