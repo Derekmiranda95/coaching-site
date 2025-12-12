@@ -189,13 +189,23 @@ a {
 }
 
 .logo-image {
-    height: 60px;
+    height: 40px;
     width: auto;
+    max-width: 150px;
+    object-fit: contain;
     transition: transform var(--transition-normal);
 }
 
 .logo-image:hover {
     transform: scale(1.05);
+}
+
+/* Responsive logo sizing */
+@media (max-width: 768px) {
+    .logo-image {
+        height: 32px;
+        max-width: 120px;
+    }
 }
 
 .logo-text {
