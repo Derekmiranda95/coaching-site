@@ -274,7 +274,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const footerYear = document.querySelector('.footer-bottom p');
     if (footerYear) {
         const currentYear = new Date().getFullYear();
-        footerYear.innerHTML = `&copy; ${currentYear} FreeBody Performance. All rights reserved.`;
+        footerYear.innerHTML = `&copy; ${currentYear} Coach Derek Miranda LLC. All rights reserved.`;
     }
     
     // ===== Prevent Form Resubmission on Refresh =====
@@ -285,7 +285,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // ===== Console Welcome Message =====
     console.log('%cWelcome to FreeBody Performance! 💪', 'font-size: 20px; font-weight: bold; color: #0066FF;');
     console.log('%cMove Freely, Live Fully', 'font-size: 14px; color: #333;');
-    console.log('%cWebsite by FreeBody Performance', 'font-size: 12px; color: #666;');
+    console.log('%c© Coach Derek Miranda LLC', 'font-size: 12px; color: #666;');
 });
 
 // ===== Utility Functions =====

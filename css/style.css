@@ -188,6 +188,16 @@ a {
     line-height: 1;
 }
 
+.logo-image {
+    height: 60px;
+    width: auto;
+    transition: transform var(--transition-normal);
+}
+
+.logo-image:hover {
+    transform: scale(1.05);
+}
+
 .logo-text {
     font-family: var(--font-heading);
     font-size: 1.75rem;
