@@ -184,15 +184,18 @@ a {
 
 .logo {
     display: flex;
-    flex-direction: column;
+    align-items: center;
     line-height: 1;
+    max-height: 50px;
 }
 
 .logo-image {
-    height: 40px;
-    width: auto;
-    max-width: 150px;
+    height: 40px !important;
+    width: auto !important;
+    max-width: 150px !important;
+    max-height: 40px !important;
     object-fit: contain;
+    display: block;
     transition: transform var(--transition-normal);
 }
 
@@ -202,9 +205,14 @@ a {
 
 /* Responsive logo sizing */
 @media (max-width: 768px) {
+    .logo {
+        max-height: 40px;
+    }
+    
     .logo-image {
-        height: 32px;
-        max-width: 120px;
+        height: 32px !important;
+        max-width: 120px !important;
+        max-height: 32px !important;
     }
 }
 
