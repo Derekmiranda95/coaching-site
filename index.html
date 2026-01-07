@@ -198,7 +198,14 @@
             
             <div class="booking-content">
                 <div class="booking-form-container">
-                    <form id="bookingForm" class="booking-form">
+                    <form id="bookingForm" class="booking-form" action="https://formsubmit.co/Derekmpt@gmail.com" method="POST">
+                        <!-- FormSubmit Configuration -->
+                        <input type="hidden" name="_subject" value="🎯 New Free Consultation Request - FreeBody Performance">
+                        <input type="hidden" name="_next" value="https://www.freebodyperformance.com/#success">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="box">
+                        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+                        
                         <div class="form-group">
                             <label for="name"><i class="fas fa-user"></i> Full Name</label>
                             <input type="text" id="name" name="name" required placeholder="Enter your name">
@@ -216,29 +223,29 @@
                         
                         <div class="form-group">
                             <label for="interest"><i class="fas fa-list"></i> Area of Interest</label>
-                            <select id="interest" name="interest" required>
+                            <select id="interest" name="Area_of_Interest" required>
                                 <option value="">What are you interested in?</option>
-                                <option value="in-person">1-on-1 In-Person Training</option>
-                                <option value="virtual">Virtual Training</option>
-                                <option value="programming">Personalized Programming</option>
-                                <option value="not-sure">Not Sure Yet</option>
+                                <option value="1-on-1 In-Person Training">1-on-1 In-Person Training</option>
+                                <option value="Virtual Training">Virtual Training</option>
+                                <option value="Personalized Programming">Personalized Programming</option>
+                                <option value="Not Sure Yet">Not Sure Yet</option>
                             </select>
                         </div>
                         
                         <div class="form-group">
                             <label for="availability"><i class="fas fa-clock"></i> Best Time to Reach You</label>
-                            <select id="availability" name="availability" required>
+                            <select id="availability" name="Best_Time_to_Reach" required>
                                 <option value="">Select your preferred time</option>
-                                <option value="morning">Morning (6 AM - 12 PM)</option>
-                                <option value="afternoon">Afternoon (12 PM - 5 PM)</option>
-                                <option value="evening">Evening (5 PM - 8 PM)</option>
-                                <option value="flexible">Flexible</option>
+                                <option value="Morning (6 AM - 12 PM)">Morning (6 AM - 12 PM)</option>
+                                <option value="Afternoon (12 PM - 5 PM)">Afternoon (12 PM - 5 PM)</option>
+                                <option value="Evening (5 PM - 8 PM)">Evening (5 PM - 8 PM)</option>
+                                <option value="Flexible">Flexible</option>
                             </select>
                         </div>
                         
                         <div class="form-group">
                             <label for="goals"><i class="fas fa-bullseye"></i> Your Goals</label>
-                            <textarea id="goals" name="goals" rows="4" placeholder="Tell us about your fitness goals and what you'd like to achieve..."></textarea>
+                            <textarea id="goals" name="Fitness_Goals" rows="4" placeholder="Tell us about your fitness goals and what you'd like to achieve..."></textarea>
                         </div>
                         
                         <button type="submit" class="btn btn-primary btn-block">

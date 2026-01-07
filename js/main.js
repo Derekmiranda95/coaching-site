@@ -92,38 +92,18 @@ document.addEventListener('DOMContentLoaded', function() {
     const successModal = document.getElementById('successModal');
     const closeModalBtn = document.getElementById('closeModal');
     
-    // Form setup (removed date validation as we're using availability dropdown)
+    // FormSubmit.co handles the form submission via POST
+    // The form will redirect to the _next URL after submission
+    // No JavaScript submission handling needed - native form submission
     
-    // Handle form submission
-    bookingForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        // Collect form data
-        const formData = {
-            name: document.getElementById('name').value,
-            email: document.getElementById('email').value,
-            phone: document.getElementById('phone').value,
-            interest: document.getElementById('interest').value,
-            availability: document.getElementById('availability').value,
-            goals: document.getElementById('goals').value,
-            consultationType: 'Free 15-minute consultation',
-            timestamp: new Date().toISOString()
-        };
-        
-        // Store in localStorage (In production, this would be sent to a server)
-        const existingBookings = JSON.parse(localStorage.getItem('bookings') || '[]');
-        existingBookings.push(formData);
-        localStorage.setItem('bookings', JSON.stringify(existingBookings));
-        
-        // Show success modal
-        successModal.classList.add('active');
-        
-        // Reset form
-        bookingForm.reset();
-        
-        // Log for demonstration (remove in production)
-        console.log('Booking submitted:', formData);
-    });
+    // Show success modal if redirected back with #success
+    if (window.location.hash === '#success') {
+        if (successModal) {
+            successModal.classList.add('active');
+        }
+        // Clean URL
+        history.replaceState(null, null, window.location.pathname);
+    }
     
     // Close modal
     closeModalBtn.addEventListener('click', function() {
