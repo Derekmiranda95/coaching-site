@@ -92,17 +92,64 @@ document.addEventListener('DOMContentLoaded', function() {
     const successModal = document.getElementById('successModal');
     const closeModalBtn = document.getElementById('closeModal');
     
-    // FormSubmit.co handles the form submission via POST
-    // The form will redirect to the _next URL after submission
-    // No JavaScript submission handling needed - native form submission
+    // Zapier Webhook Configuration
+    const ZAPIER_WEBHOOK_URL = 'https://hooks.zapier.com/hooks/catch/21459748/uwc2six/';
     
-    // Show success modal if redirected back with #success
-    if (window.location.hash === '#success') {
-        if (successModal) {
-            successModal.classList.add('active');
-        }
-        // Clean URL
-        history.replaceState(null, null, window.location.pathname);
+    // Handle form submission
+    if (bookingForm) {
+        bookingForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            // Get submit button
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalBtnText = submitBtn.innerHTML;
+            
+            // Show loading state
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Submitting...';
+            
+            // Collect form data
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                Area_of_Interest: document.getElementById('interest').value,
+                Best_Time_to_Reach: document.getElementById('availability').value,
+                Fitness_Goals: document.getElementById('goals').value || 'Not specified',
+                timestamp: new Date().toISOString(),
+                submission_date: new Date().toLocaleDateString('en-US'),
+                submission_time: new Date().toLocaleTimeString('en-US')
+            };
+            
+            try {
+                // Send to Zapier
+                const response = await fetch(ZAPIER_WEBHOOK_URL, {
+                    method: 'POST',
+                    body: JSON.stringify(formData)
+                });
+                
+                if (response.ok) {
+                    // Show success modal
+                    successModal.classList.add('active');
+                    
+                    // Reset form
+                    bookingForm.reset();
+                    
+                    // Reset button
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = originalBtnText;
+                } else {
+                    throw new Error('Submission failed');
+                }
+            } catch (error) {
+                console.error('Error submitting form:', error);
+                alert('Oops! Something went wrong. Please try again or contact us directly at Derekmpt@gmail.com');
+                
+                // Reset button
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalBtnText;
+            }
+        });
     }
     
     // Close modal
