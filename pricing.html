@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="FreeBody Performance Training Membership Structure - Flexible pricing options for your fitness journey.">
-    <title>Pricing & Membership - FreeBody Performance</title>
+    <meta name="description" content="NYC personal training memberships at Sportslab Madison Ave. Performance: $1,200/mo (2x/week), Elite: $1,740/mo (3x/week). Virtual & flex options. No contracts. Book now!">
+    <title>Personal Training Pricing NYC | $1,200-$1,740/mo | Sportslab Manhattan</title>
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,6 +17,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/pricing.css">
+    <link rel="stylesheet" href="css/pricing-carousel.css">
 </head>
 <body>
     <!-- Navigation -->
@@ -52,154 +53,140 @@
         </div>
     </section>
 
-    <!-- Membership Tiers Section -->
+    <!-- Pricing Carousel Section -->
     <section class="pricing-section">
         <div class="container">
-            <h2 class="section-title">Monthly Membership Tiers</h2>
-            <p class="section-intro">Our membership options are designed for consistent progress and results.</p>
+            <h2 class="section-title">Training Options & Pricing</h2>
+            <p class="section-intro">Swipe or scroll to explore all membership and flexible training options</p>
             
-            <div class="pricing-grid">
-                <!-- Tier 1: Performance -->
-                <div class="pricing-card">
-                    <div class="pricing-header">
-                        <h3 class="tier-name">Performance</h3>
-                        <p class="tier-subtitle">2× per week</p>
+            <!-- Carousel Container -->
+            <div class="pricing-carousel-wrapper">
+                <button class="carousel-nav prev" id="pricingPrev" aria-label="Previous">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                
+                <div class="pricing-carousel" id="pricingCarousel">
+                    <!-- Card 1: Performance -->
+                    <div class="pricing-card">
+                        <div class="card-label">Monthly Membership</div>
+                        <div class="pricing-header">
+                            <h3 class="tier-name">Performance</h3>
+                            <p class="tier-subtitle">2× per week</p>
+                        </div>
+                        <div class="pricing-price">
+                            <span class="price-amount">$1,200</span>
+                            <span class="price-period">/month</span>
+                        </div>
+                        <div class="pricing-details">
+                            <p class="session-info">8 sessions/month</p>
+                            <p class="session-rate">$150 per session</p>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> Consistent weekly training</li>
+                            <li><i class="fas fa-check"></i> Auto-renews monthly</li>
+                            <li><i class="fas fa-check"></i> Session banking available</li>
+                            <li><i class="fas fa-check"></i> Virtual training option</li>
+                            <li><i class="fas fa-check"></i> Pause policy included</li>
+                        </ul>
+                        <a href="https://square.link/u/xT7Ow0VR" target="_blank" class="btn btn-outline">Purchase 8-Pack</a>
                     </div>
-                    <div class="pricing-price">
-                        <span class="price-amount">$1,200</span>
-                        <span class="price-period">/month</span>
-                    </div>
-                    <div class="pricing-details">
-                        <p class="session-info">8 sessions/month</p>
-                        <p class="session-rate">$150 per session</p>
-                    </div>
-                    <ul class="pricing-features">
-                        <li><i class="fas fa-check"></i> Consistent weekly training</li>
-                        <li><i class="fas fa-check"></i> Auto-renews monthly</li>
-                        <li><i class="fas fa-check"></i> Session banking available</li>
-                        <li><i class="fas fa-check"></i> Virtual training option</li>
-                        <li><i class="fas fa-check"></i> Pause policy included</li>
-                    </ul>
-                    <a href="https://square.link/u/xT7Ow0VR" target="_blank" class="btn btn-outline">Purchase 8-Pack</a>
-                </div>
 
-                <!-- Tier 2: Elite -->
-                <div class="pricing-card featured">
-                    <div class="popular-badge">Best Value</div>
-                    <div class="pricing-header">
-                        <h3 class="tier-name">Elite</h3>
-                        <p class="tier-subtitle">3× per week</p>
+                    <!-- Card 2: Elite -->
+                    <div class="pricing-card featured">
+                        <div class="popular-badge">Best Value</div>
+                        <div class="card-label">Monthly Membership</div>
+                        <div class="pricing-header">
+                            <h3 class="tier-name">Elite</h3>
+                            <p class="tier-subtitle">3× per week</p>
+                        </div>
+                        <div class="pricing-price">
+                            <span class="price-amount">$1,740</span>
+                            <span class="price-period">/month</span>
+                        </div>
+                        <div class="pricing-details">
+                            <p class="session-info">12 sessions/month</p>
+                            <p class="session-rate">$145 per session</p>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> Optimal training frequency</li>
+                            <li><i class="fas fa-check"></i> Auto-renews monthly</li>
+                            <li><i class="fas fa-check"></i> Session banking available</li>
+                            <li><i class="fas fa-check"></i> Virtual training option</li>
+                            <li><i class="fas fa-check"></i> Pause policy included</li>
+                            <li><i class="fas fa-check"></i> <strong>Save $5/session</strong></li>
+                        </ul>
+                        <a href="https://square.link/u/8YJqyoMQ" target="_blank" class="btn btn-primary">Purchase 12-Pack</a>
                     </div>
-                    <div class="pricing-price">
-                        <span class="price-amount">$1,740</span>
-                        <span class="price-period">/month</span>
+
+                    <!-- Card 3: Drop-In Session -->
+                    <div class="pricing-card accent">
+                        <div class="card-label">Single Session</div>
+                        <div class="pricing-header">
+                            <h3 class="tier-name">Drop-In Session</h3>
+                            <p class="tier-subtitle">Pay as you go</p>
+                        </div>
+                        <div class="pricing-price">
+                            <span class="price-amount">$200</span>
+                            <span class="price-period">per session</span>
+                        </div>
+                        <div class="pricing-details">
+                            <p class="session-info">Single session</p>
+                            <p class="session-rate premium">Premium anchor pricing</p>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-bolt"></i> Trying out coaching</li>
+                            <li><i class="fas fa-gift"></i> Gift sessions</li>
+                            <li><i class="fas fa-handshake"></i> One-time consultations</li>
+                            <li><i class="fas fa-route"></i> Visiting NYC temporarily</li>
+                            <li><i class="fas fa-check"></i> Pay-as-you-go</li>
+                            <li><i class="fas fa-check"></i> No commitments</li>
+                        </ul>
+                        <a href="https://book.squareup.com/appointments/7dda94w17xnbz2/location/LW5D6MFYFJR88/services/TFKTCJCKA7NDE5SNMSCXGQKN" target="_blank" class="btn btn-primary">Book Drop-In</a>
                     </div>
-                    <div class="pricing-details">
-                        <p class="session-info">12 sessions/month</p>
-                        <p class="session-rate">$145 per session</p>
+
+                    <!-- Card 4: Flex Pack -->
+                    <div class="pricing-card">
+                        <div class="card-label">Flexible Option</div>
+                        <div class="pricing-header">
+                            <h3 class="tier-name">Flex Pack</h3>
+                            <p class="tier-subtitle">10 Sessions</p>
+                        </div>
+                        <div class="pricing-price">
+                            <span class="price-amount">$1,700</span>
+                            <span class="price-period">total</span>
+                        </div>
+                        <div class="pricing-details">
+                            <p class="session-info">$170 per session</p>
+                            <p class="session-rate">Expires in 3 months</p>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-plane"></i> Travel-heavy clients</li>
+                            <li><i class="fas fa-user-check"></i> Testing fit before committing</li>
+                            <li><i class="fas fa-credit-card"></i> Prefer one-time payment</li>
+                            <li><i class="fas fa-calendar-xmark"></i> Unpredictable schedules</li>
+                            <li><i class="fas fa-info-circle"></i> No banking or auto-renewal</li>
+                            <li><i class="fas fa-info-circle"></i> 12-hour cancellation policy</li>
+                        </ul>
+                        <a href="https://square.link/u/dOhevMbp" target="_blank" class="btn btn-outline">Purchase Flex Pack</a>
                     </div>
-                    <ul class="pricing-features">
-                        <li><i class="fas fa-check"></i> Optimal training frequency</li>
-                        <li><i class="fas fa-check"></i> Auto-renews monthly</li>
-                        <li><i class="fas fa-check"></i> Session banking available</li>
-                        <li><i class="fas fa-check"></i> Virtual training option</li>
-                        <li><i class="fas fa-check"></i> Pause policy included</li>
-                        <li><i class="fas fa-check"></i> <strong>Save $5/session</strong></li>
-                    </ul>
-                    <a href="https://square.link/u/8YJqyoMQ" target="_blank" class="btn btn-primary">Purchase 12-Pack</a>
                 </div>
+                
+                <button class="carousel-nav next" id="pricingNext" aria-label="Next">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+            
+            <!-- Carousel Indicators -->
+            <div class="carousel-indicators" id="pricingIndicators">
+                <button class="indicator active" data-index="0" aria-label="Go to Performance"></button>
+                <button class="indicator" data-index="1" aria-label="Go to Elite"></button>
+                <button class="indicator" data-index="2" aria-label="Go to Drop-In"></button>
+                <button class="indicator" data-index="3" aria-label="Go to Flex Pack"></button>
             </div>
 
             <div class="membership-note">
                 <i class="fas fa-info-circle"></i>
                 <p><strong>Why no once-a-week option?</strong> Once-weekly sessions don't create meaningful progress. Our coaching focuses on clients who want consistent training and real results.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Flexible Options Section -->
-    <section class="flexible-options">
-        <div class="container">
-            <h2 class="section-title">Flexible Training Options</h2>
-            <p class="section-intro">For clients who prefer flexibility without monthly commitments</p>
-            
-            <div class="flex-grid">
-                <!-- Flex Pack -->
-                <div class="flex-card">
-                    <div class="flex-header">
-                        <i class="fas fa-calendar-days"></i>
-                        <h3>Flex Pack</h3>
-                        <p class="flex-subtitle">10 Sessions</p>
-                    </div>
-                    <div class="flex-price">
-                        <span class="price-amount">$1,700</span>
-                        <span class="price-period">total</span>
-                    </div>
-                    <p class="session-rate">$170 per session</p>
-                    <p class="expiration">Expires in 3 months</p>
-                    
-                    <div class="divider"></div>
-                    
-                    <h4>Perfect for:</h4>
-                    <ul class="flex-benefits">
-                        <li><i class="fas fa-plane"></i> Travel-heavy clients</li>
-                        <li><i class="fas fa-user-check"></i> Testing fit before committing</li>
-                        <li><i class="fas fa-credit-card"></i> Prefer one-time payment</li>
-                        <li><i class="fas fa-calendar-xmark"></i> Unpredictable schedules</li>
-                    </ul>
-                    
-                    <div class="divider"></div>
-                    
-                    <h4>Important Notes:</h4>
-                    <ul class="flex-notes">
-                        <li>No banking available</li>
-                        <li>No auto-renewal</li>
-                        <li>No pause policy</li>
-                        <li>No membership perks</li>
-                        <li>Scheduled based on availability</li>
-                        <li>12-hour cancellation policy applies</li>
-                    </ul>
-                    
-                    <a href="https://square.link/u/dOhevMbp" target="_blank" class="btn btn-outline">Purchase Flex Pack</a>
-                </div>
-
-                <!-- Drop-In Session -->
-                <div class="flex-card accent">
-                    <div class="flex-header">
-                        <i class="fas fa-star"></i>
-                        <h3>Drop-In Session</h3>
-                        <p class="flex-subtitle">Single Session</p>
-                    </div>
-                    <div class="flex-price">
-                        <span class="price-amount">$200</span>
-                        <span class="price-period">per session</span>
-                    </div>
-                    <p class="session-rate premium">Premium anchor pricing</p>
-                    
-                    <div class="divider"></div>
-                    
-                    <h4>Ideal for:</h4>
-                    <ul class="flex-benefits">
-                        <li><i class="fas fa-bolt"></i> Trying out coaching</li>
-                        <li><i class="fas fa-gift"></i> Gift sessions</li>
-                        <li><i class="fas fa-handshake"></i> One-time consultations</li>
-                        <li><i class="fas fa-route"></i> Visiting NYC temporarily</li>
-                    </ul>
-                    
-                    <div class="divider"></div>
-                    
-                    <h4>Details:</h4>
-                    <ul class="flex-notes">
-                        <li>Pay-as-you-go</li>
-                        <li>No commitments</li>
-                        <li>12-hour cancellation policy</li>
-                        <li>Great introduction to our coaching</li>
-                    </ul>
-                    
-                    <p class="cta-note">Most clients choose memberships after trying a drop-in session!</p>
-                    
-                    <a href="https://book.squareup.com/appointments/7dda94w17xnbz2/location/LW5D6MFYFJR88/services/TFKTCJCKA7NDE5SNMSCXGQKN" target="_blank" class="btn btn-primary">Book Drop-In</a>
-                </div>
             </div>
         </div>
     </section>
@@ -444,5 +431,6 @@
 
     <!-- Custom JavaScript -->
     <script src="js/main.js"></script>
+    <script src="js/pricing-carousel.js"></script>
 </body>
 </html>
