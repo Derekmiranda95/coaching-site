@@ -90,6 +90,7 @@ a {
 .btn {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: var(--spacing-xs);
     padding: 1rem 2rem;
     font-family: var(--font-heading);
@@ -101,6 +102,8 @@ a {
     border-radius: 50px;
     cursor: pointer;
     transition: all var(--transition-normal);
+    text-decoration: none;
+    text-align: center;
 }
 
 .btn-primary {
