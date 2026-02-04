@@ -10,10 +10,16 @@
     <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="apple-touch-icon" href="images/favicon.png">
     
-    <!-- Google Fonts -->
+    <!-- Preconnect to External Domains -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    
+    <!-- Google Fonts - Optimized Loading -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    </noscript>
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
@@ -49,7 +55,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="page-hero">
+    <section class="page-hero" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/FBP7.webp'); background-size: 60%; background-position: center; background-repeat: no-repeat; background-color: #000; padding: 120px 0 80px; color: white;">
         <div class="container">
             <h1 class="page-title">Frequently Asked Questions</h1>
             <p class="page-subtitle">Everything you need to know about training with FreeBody Performance</p>
@@ -381,7 +387,7 @@
     </footer>
 
     <!-- Custom JavaScript -->
-    <script src="js/main.js"></script>
-    <script src="js/faq.js"></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/faq.js" defer></script>
 </body>
 </html>

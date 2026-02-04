@@ -361,6 +361,86 @@ function getAvailabilityName(availabilityValue) {
     return availabilityNames[availabilityValue] || availabilityValue;
 }
 
+// ===== About Section Carousel =====
+let aboutSlideIndex = 1;
+
+function moveAboutCarousel(n) {
+    showAboutSlides(aboutSlideIndex += n);
+}
+
+function currentAboutSlide(n) {
+    showAboutSlides(aboutSlideIndex = n);
+}
+
+function showAboutSlides(n) {
+    const slides = document.querySelectorAll('.about-carousel .carousel-slide');
+    const indicators = document.querySelectorAll('.about-carousel .indicator');
+    
+    if (!slides.length) return;
+    
+    if (n > slides.length) { aboutSlideIndex = 1; }
+    if (n < 1) { aboutSlideIndex = slides.length; }
+    
+    // Hide all slides
+    slides.forEach(slide => slide.classList.remove('active'));
+    
+    // Remove active from all indicators
+    indicators.forEach(indicator => indicator.classList.remove('active'));
+    
+    // Show current slide
+    slides[aboutSlideIndex - 1].classList.add('active');
+    indicators[aboutSlideIndex - 1].classList.add('active');
+}
+
+// Auto-advance carousel every 5 seconds
+setInterval(() => {
+    if (document.querySelector('.about-carousel')) {
+        moveAboutCarousel(1);
+    }
+}, 5000);
+
+// ===== Client Photos Carousel (Online Programming Page) =====
+let clientSlideIndex = 1;
+
+function moveClientCarousel(n) {
+    showClientSlides(clientSlideIndex += n);
+}
+
+function setClientSlide(n) {
+    showClientSlides(clientSlideIndex = n);
+}
+
+function showClientSlides(n) {
+    const slides = document.querySelectorAll('.client-slide');
+    const indicators = document.querySelectorAll('.client-indicator');
+    
+    if (!slides.length) return;
+    
+    if (n > slides.length) { clientSlideIndex = 1; }
+    if (n < 1) { clientSlideIndex = slides.length; }
+    
+    // Hide all slides
+    slides.forEach(slide => slide.classList.remove('active'));
+    
+    // Remove active from all indicators
+    indicators.forEach(indicator => indicator.classList.remove('active'));
+    
+    // Show current slide
+    slides[clientSlideIndex - 1].classList.add('active');
+    if (indicators[clientSlideIndex - 1]) {
+        indicators[clientSlideIndex - 1].classList.add('active');
+    }
+}
+
+// Auto-advance client carousel every 4 seconds
+setInterval(() => {
+    if (document.querySelector('.client-photos-carousel')) {
+        moveClientCarousel(1);
+    }
+}, 4000);
+
+
+
 // ===== Export for testing (if needed) =====
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = {
