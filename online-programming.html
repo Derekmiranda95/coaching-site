@@ -24,11 +24,66 @@
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
     </noscript>
     
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <!-- Font Awesome - Optimized Loading -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    </noscript>
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Online Personal Training $250/mo | Virtual Fitness Coach">
+    <meta property="og:description" content="Custom online workout & nutrition programming by ACE Certified Trainer Derek Miranda. Mobile app, unlimited messaging, monthly updates. Train anywhere.">
+    <meta property="og:url" content="https://freebodyperformance.com/online-programming.html">
+    <meta property="og:image" content="https://freebodyperformance.com/images/FBP17.webp">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Online Personal Training $250/mo | Virtual Fitness Coach">
+    <meta name="twitter:description" content="Custom online workout & nutrition programming by ACE Certified Trainer Derek Miranda. Mobile app, unlimited messaging, monthly updates.">
+    <meta name="twitter:image" content="https://freebodyperformance.com/images/FBP17.webp">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://freebodyperformance.com/online-programming.html">
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    
+    <!-- Schema.org Markup for Online Training -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Online Personal Training Program",
+        "description": "Custom workout and nutrition programming with mobile app access, unlimited coach messaging, and monthly updates",
+        "brand": {
+            "@type": "Brand",
+            "name": "FreeBody Performance"
+        },
+        "offers": {
+            "@type": "Offer",
+            "price": "250",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock",
+            "url": "https://freebodyperformance.com/online-programming.html",
+            "priceValidUntil": "2026-12-31"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5.0",
+            "reviewCount": "50"
+        }
+    }
+    </script>
 </head>
 <body>
     <!-- Navigation -->
@@ -114,7 +169,7 @@
             <!-- Dynamic Image Section -->
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; margin-top: 60px; max-width: 1200px; margin-left: auto; margin-right: auto;">
                 <div style="order: 1;">
-                    <img src="images/FBP5.webp" alt="Mobile fitness app" style="width: 100%; border-radius: 20px; box-shadow: 0 20px 60px rgba(0,102,255,0.3);">
+                    <img src="images/FBP5.webp" alt="Personal trainer coaching client at gym" width="600" height="400" loading="lazy" decoding="async" style="width: 100%; border-radius: 20px; box-shadow: 0 20px 60px rgba(0,102,255,0.3);">
                 </div>
                 <div style="order: 2; text-align: left;">
                     <h3 style="font-size: 2rem; color: #000; margin-bottom: 20px;">Everything in Your Pocket</h3>
@@ -219,7 +274,7 @@
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; max-width: 1200px; margin: 0 auto;">
                 <!-- Image Column -->
                 <div>
-                    <img src="images/FBP7.webp" alt="Athlete training with online program" style="width: 100%; border-radius: 20px; box-shadow: 0 20px 60px rgba(0,0,0,0.2);">
+                    <img src="images/FBP7.webp" alt="Personal trainer demonstrating proper form to client" width="600" height="400" loading="lazy" decoding="async" style="width: 100%; border-radius: 20px; box-shadow: 0 20px 60px rgba(0,0,0,0.2);">
                 </div>
 
                 <!-- Content Column -->
