@@ -1,7 +1,7 @@
 // Service Worker for FreeBody Performance
-// Version 1.0 - February 2026
+// Version 2.0 - February 2026 (Cache Refresh)
 
-const CACHE_NAME = 'freebody-v1';
+const CACHE_NAME = 'freebody-v2';
 const ASSETS_TO_CACHE = [
     '/',
     '/index.html',
