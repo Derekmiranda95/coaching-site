@@ -15,8 +15,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdn.jsdelivr.net">
     
-    <!-- Preload Hero Image -->
+    <!-- Preload Hero Image and Critical Assets -->
     <link rel="preload" as="image" href="images/FBP17.webp" fetchpriority="high">
+    <link rel="preload" as="style" href="css/style.css">
+    <link rel="preload" as="script" href="js/main.js">
     
     <!-- Google Fonts - Optimized Loading -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
@@ -45,6 +47,11 @@
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://freebodyperformance.com/online-programming.html">
+    
+    <!-- Critical CSS - Inline for faster first paint -->
+    <style>
+    :root{--primary-blue:#0066FF;--dark-blue:#0052CC;--black:#000;--white:#FFF;--light-gray:#F8F9FA;--medium-gray:#666}*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Inter',sans-serif;line-height:1.6;color:var(--black);background:var(--white)}.page-hero{padding:140px 0 80px;text-align:center;color:white;position:relative}.navbar{position:fixed;top:0;width:100%;background:var(--white);box-shadow:0 2px 10px rgba(0,0,0,.1);z-index:1000;transition:all .3s ease}
+    </style>
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">

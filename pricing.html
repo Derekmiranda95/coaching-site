@@ -34,6 +34,13 @@
     <link rel="preconnect" href="https://cdn.jsdelivr.net">
     <link rel="dns-prefetch" href="https://square.link">
     
+    <!-- Preload Hero Image and Critical Assets -->
+    <link rel="preload" as="image" href="images/FBP9.webp" fetchpriority="high">
+    <link rel="preload" as="style" href="css/style.css">
+    <link rel="preload" as="style" href="css/pricing.css">
+    <link rel="preload" as="script" href="js/main.js">
+    <link rel="preload" as="script" href="js/pricing-carousel.js">
+    
     <!-- Google Fonts - Optimized Loading -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
     <noscript>
@@ -45,6 +52,11 @@
     <noscript>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
     </noscript>
+    
+    <!-- Critical CSS - Inline for faster first paint -->
+    <style>
+    :root{--primary-blue:#0066FF;--dark-blue:#0052CC;--black:#000;--white:#FFF;--light-gray:#F8F9FA;--medium-gray:#666}*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Inter',sans-serif;line-height:1.6;color:var(--black);background:var(--white)}.page-hero{padding:120px 0 80px;text-align:center;color:white;position:relative}.navbar{position:fixed;top:0;width:100%;background:var(--white);box-shadow:0 2px 10px rgba(0,0,0,.1);z-index:1000;transition:all .3s ease}
+    </style>
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
@@ -97,9 +109,79 @@
     <!-- Pricing Carousel Section -->
     <section class="pricing-section">
         <div class="container">
-            <div style="text-align: center;">
+            <div class="section-header">
                 <h2 class="section-title">Training Options & Pricing</h2>
             </div>
+            
+            <!-- Limited-Time Offer Banner -->
+            <div class="limited-offer-banner" style="background: linear-gradient(135deg, #FFD700, #FFA500); padding: 25px 30px; border-radius: 15px; text-align: center; margin-bottom: 40px; box-shadow: 0 5px 20px rgba(255,165,0,0.3); max-width: 900px; margin-left: auto; margin-right: auto; margin-bottom: 40px;">
+                <div style="font-size: 0.9rem; font-weight: 600; color: #333; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 1px;">⏰ Limited Time Offer</div>
+                <div style="font-size: 1.4rem; font-weight: 800; color: #000; margin-bottom: 8px;">
+                    First 3 New Clients This Month: FREE Nutrition Consultation
+                </div>
+                <div style="font-size: 1.1rem; color: #333; margin-bottom: 10px;">
+                    ($200 Value Included FREE)
+                </div>
+                <div style="margin-top: 10px; font-size: 0.9rem; color: #333;">
+                    <strong style="background: rgba(0,0,0,0.1); padding: 5px 15px; border-radius: 20px;">🔥 2 spots remaining</strong> • Offer expires February 28, 2026
+                </div>
+            </div>
+            
+            <!-- Value Comparison Calculator -->
+            <div class="value-calculator" style="background: #F8F9FA; padding: 50px 30px; border-radius: 20px; margin-bottom: 60px;">
+                <h3 style="color: #0066FF; margin-bottom: 40px; font-size: 2rem; text-align: center;">The True Cost of NOT Training</h3>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; max-width: 1000px; margin: 0 auto;">
+                    <!-- Without Training -->
+                    <div style="background: white; padding: 35px; border-radius: 15px; border: 2px dashed #ccc;">
+                        <div style="font-size: 1.5rem; margin-bottom: 20px; color: #666; font-weight: 600; text-align: center;">❌ Without Training</div>
+                        <div style="text-align: left; color: #666; line-height: 2; font-size: 1rem;">
+                            • Chronic pain visits: <strong>$200/mo</strong><br>
+                            • Pain medications: <strong>$150/mo</strong><br>
+                            • Lost productivity: <strong>$500/mo</strong><br>
+                            • Medical co-pays: <strong>$300/mo</strong><br>
+                            • Poor quality of life: <strong>Priceless</strong>
+                        </div>
+                        <div style="margin-top: 25px; padding-top: 20px; border-top: 2px solid #ccc; text-align: center;">
+                            <div style="font-size: 2rem; font-weight: 800; color: #E74C3C;">
+                                -$1,150+/month
+                            </div>
+                            <div style="color: #999; margin-top: 5px; font-size: 0.9rem;">Money lost to health problems</div>
+                        </div>
+                    </div>
+                    
+                    <!-- With Training -->
+                    <div style="background: linear-gradient(135deg, #0066FF, #0052CC); padding: 35px; border-radius: 15px; color: white; position: relative; box-shadow: 0 10px 30px rgba(0,102,255,0.3);">
+                        <div style="position: absolute; top: -15px; right: 20px; background: #FFD700; color: #000; padding: 8px 20px; border-radius: 20px; font-weight: 700; font-size: 0.85rem;">BEST VALUE</div>
+                        <div style="font-size: 1.5rem; margin-bottom: 20px; font-weight: 600; text-align: center;">✅ With Training</div>
+                        <div style="text-align: left; line-height: 2; font-size: 1rem;">
+                            • Pain-free living: <strong>✓ Achieved</strong><br>
+                            • No medications needed: <strong>✓ Achieved</strong><br>
+                            • Peak productivity: <strong>✓ Achieved</strong><br>
+                            • Preventive health: <strong>✓ Achieved</strong><br>
+                            • Amazing quality of life: <strong>✓ Priceless</strong>
+                        </div>
+                        <div style="margin-top: 25px; padding-top: 20px; border-top: 2px solid rgba(255,255,255,0.3); text-align: center;">
+                            <div style="font-size: 2rem; font-weight: 800;">
+                                $1,200/month
+                            </div>
+                            <div style="opacity: 0.9; margin-top: 5px; font-size: 0.9rem;">Smart investment in your health</div>
+                        </div>
+                    </div>
+                </div>
+                <div style="margin-top: 40px; text-align: center; font-size: 1.2rem; color: #333; font-weight: 600; max-width: 700px; margin-left: auto; margin-right: auto; padding: 20px; background: white; border-radius: 10px; border-left: 5px solid #0066FF;">
+                    💡 Training isn't a cost—it's a smart investment that pays for itself.
+                </div>
+                
+                <!-- Mobile Responsive Adjustment -->
+                <style>
+                @media (max-width: 768px) {
+                    .value-calculator > div:first-of-type {
+                        grid-template-columns: 1fr !important;
+                    }
+                }
+                </style>
+            </div>
+            
             <p class="section-intro">Swipe or scroll to explore all membership and flexible training options</p>
             
             <!-- Carousel Container -->
@@ -217,14 +299,14 @@
                 <button class="carousel-nav next" id="pricingNext" aria-label="Next">
                     <i class="fas fa-chevron-right"></i>
                 </button>
-            </div>
-            
-            <!-- Carousel Indicators -->
-            <div class="carousel-indicators" id="pricingIndicators">
-                <button class="indicator active" data-index="0" aria-label="Go to Performance"></button>
-                <button class="indicator" data-index="1" aria-label="Go to Elite"></button>
-                <button class="indicator" data-index="2" aria-label="Go to Drop-In"></button>
-                <button class="indicator" data-index="3" aria-label="Go to Flex Pack"></button>
+                
+                <!-- Carousel Indicators -->
+                <div class="carousel-indicators" id="pricingIndicators">
+                    <button class="indicator active" data-index="0" aria-label="Go to Performance"></button>
+                    <button class="indicator" data-index="1" aria-label="Go to Elite"></button>
+                    <button class="indicator" data-index="2" aria-label="Go to Drop-In"></button>
+                    <button class="indicator" data-index="3" aria-label="Go to Flex Pack"></button>
+                </div>
             </div>
 
             <div class="membership-note">
@@ -237,7 +319,9 @@
     <!-- Virtual Training Options Section -->
     <section class="flexible-options" style="background: #F8F9FA;">
         <div class="container">
-            <h2 class="section-title">Virtual Training Options</h2>
+            <div class="section-header">
+                <h2 class="section-title">Virtual Training Options</h2>
+            </div>
             <p class="section-intro">Train from anywhere with live video coaching sessions</p>
             
             <div class="flex-grid">
@@ -329,7 +413,9 @@
     <!-- Policies Section -->
     <section class="policies-section">
         <div class="container">
-            <h2 class="section-title">Membership Policies</h2>
+            <div class="section-header">
+                <h2 class="section-title">Membership Policies</h2>
+            </div>
             <p class="section-intro">Clear guidelines to help you get the most from your training</p>
             
             <div class="policies-grid">

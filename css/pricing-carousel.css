@@ -7,7 +7,7 @@
     position: relative;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 60px;
+    padding: 0 60px 60px 60px; /* Added bottom padding for indicators */
 }
 
 /* Carousel Container */
@@ -114,7 +114,11 @@
     display: flex;
     justify-content: center;
     gap: 12px;
-    margin-top: 30px;
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
 }
 
 .carousel-indicators .indicator {

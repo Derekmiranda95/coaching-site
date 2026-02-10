@@ -41,6 +41,10 @@
     <!-- Preload Hero Image -->
     <link rel="preload" as="image" href="images/FBP10.webp" fetchpriority="high">
     
+    <!-- Preload Critical Assets -->
+    <link rel="preload" as="style" href="css/style.css">
+    <link rel="preload" as="script" href="js/main.js">
+    
     <!-- Google Fonts - Optimized Loading -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
     <noscript>
@@ -52,6 +56,11 @@
     <noscript>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
     </noscript>
+    
+    <!-- Critical CSS - Inline for faster first paint -->
+    <style>
+    :root{--primary-blue:#0066FF;--dark-blue:#0052CC;--black:#000;--white:#FFF;--light-gray:#F8F9FA;--medium-gray:#666}*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Inter',sans-serif;line-height:1.6;color:var(--black);background:var(--white)}.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;position:relative;overflow:hidden;padding:140px 0 80px}.hero-overlay{position:absolute;top:0;left:0;width:100%;height:100%;background:radial-gradient(ellipse at center,rgba(0,0,0,.5) 0%,rgba(0,0,0,.7) 100%);z-index:1}.hero-content{position:relative;z-index:2;max-width:900px;margin:0 auto;padding:0 20px}.navbar{position:fixed;top:0;width:100%;background:var(--white);box-shadow:0 2px 10px rgba(0,0,0,.1);z-index:1000;transition:all .3s ease}
+    </style>
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
@@ -202,6 +211,29 @@
                     <span class="title-secondary">Live Fully</span>
                 </h1>
                 <p class="hero-subtitle">Transform your body, eliminate pain, and unlock your athletic potential with personalized coaching.</p>
+                
+                <!-- Social Proof Badge -->
+                <a href="https://share.google/Rof8HkwJZdgStlGoE" target="_blank" rel="noopener" style="text-decoration: none;">
+                    <div class="hero-trust-badge" style="display: inline-flex; align-items: center; gap: 15px; background: rgba(255,255,255,0.95); padding: 15px 25px; border-radius: 50px; margin-top: 20px; margin-bottom: 20px; box-shadow: 0 5px 20px rgba(0,0,0,0.2); cursor: pointer; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                        <div style="display: flex; color: #FFA500; font-size: 1.1rem;">
+                            ⭐⭐⭐⭐⭐
+                        </div>
+                        <div style="font-size: 0.95rem; color: #333; font-weight: 600;">
+                            50+ Five-Star Google Reviews
+                        </div>
+                        <div style="color: #0066FF; font-size: 0.85rem; margin-left: 5px;">
+                            →
+                        </div>
+                    </div>
+                </a>
+                
+                <style>
+                .hero-trust-badge:hover {
+                    transform: translateY(-3px);
+                    box-shadow: 0 8px 25px rgba(0,0,0,0.3) !important;
+                }
+                </style>
+                
                 <div class="hero-buttons">
                     <a href="https://book.squareup.com/appointments/7dda94w17xnbz2/location/LW5D6MFYFJR88/services/QH5SJ5TVSXV2UDY6R444CRNU" target="_blank" class="btn btn-primary">Book a Free Consultation</a>
                     <a href="#services" class="btn btn-secondary">Explore Services</a>
@@ -404,6 +436,47 @@
                 <p class="section-subtitle">Schedule your complimentary 15-minute consultation call to discuss your goals and find the perfect training plan</p>
             </div>
             
+            <!-- Pre-Form Trust Stack -->
+            <div class="pre-form-trust" style="background: #F8F9FA; padding: 40px; border-radius: 20px; margin-bottom: 40px; max-width: 1100px; margin-left: auto; margin-right: auto;">
+                <h3 style="text-align: center; color: #0066FF; margin-bottom: 30px; font-size: 1.8rem;">
+                    What Happens After You Book Your Free Consultation?
+                </h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
+                    <!-- Step 1 -->
+                    <div style="text-align: center;">
+                        <div style="font-size: 3rem; margin-bottom: 15px;">📞</div>
+                        <div style="font-weight: 600; margin-bottom: 10px; color: #333; font-size: 1.1rem;">1. Discovery Call</div>
+                        <div style="color: #666; font-size: 0.95rem; line-height: 1.6;">We'll discuss your goals, current challenges, past training experience, and what you're looking to achieve</div>
+                    </div>
+                    
+                    <!-- Step 2 -->
+                    <div style="text-align: center;">
+                        <div style="font-size: 3rem; margin-bottom: 15px;">🎯</div>
+                        <div style="font-weight: 600; margin-bottom: 10px; color: #333; font-size: 1.1rem;">2. Custom Roadmap</div>
+                        <div style="color: #666; font-size: 0.95rem; line-height: 1.6;">Get a personalized training plan tailored to your specific goals, schedule, and experience level</div>
+                    </div>
+                    
+                    <!-- Step 3 -->
+                    <div style="text-align: center;">
+                        <div style="font-size: 3rem; margin-bottom: 15px;">💪</div>
+                        <div style="font-weight: 600; margin-bottom: 10px; color: #333; font-size: 1.1rem;">3. FREE Trial Session</div>
+                        <div style="color: #666; font-size: 0.95rem; line-height: 1.6;">Experience a complimentary training session—test drive the program and see if we're the right fit</div>
+                    </div>
+                </div>
+                
+                <!-- Bonus Highlight -->
+                <div style="margin-top: 35px; padding: 25px; background: linear-gradient(135deg, #0066FF, #0052CC); border-radius: 15px; text-align: center; color: white; box-shadow: 0 5px 20px rgba(0,102,255,0.3);">
+                    <div style="font-size: 1.3rem; font-weight: 700; margin-bottom: 8px;">🎁 BONUS: Complimentary Trial Session</div>
+                    <div style="font-size: 1rem; opacity: 0.95; line-height: 1.6;">
+                        No commitment required. Come in, train with Derek, and experience the FreeBody difference firsthand. If it's not the right fit, no hard feelings!
+                    </div>
+                </div>
+                
+                <div style="margin-top: 25px; padding: 20px; background: white; border-radius: 10px; text-align: center; border-left: 5px solid #0066FF;">
+                    <strong style="color: #0066FF; font-size: 1.1rem;">100% Free • No Credit Card Required • Zero Pressure Decision</strong>
+                </div>
+            </div>
+            
             <!-- Typeform Embed -->
             <div class="typeform-container" style="max-width: 900px; margin: 0 auto; padding: 40px 20px;">
                 <div id="typeform-embed" data-tf-live="01KEPXWWXTV6NZVT84TSCV6D8Z"></div>
@@ -528,6 +601,15 @@
 
     <!-- Optimized Third-Party Script Loader -->
     <script>
+    // Register Service Worker for better caching
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/sw.js')
+                .then(reg => console.log('Service Worker registered'))
+                .catch(err => console.log('Service Worker registration failed'));
+        });
+    }
+    
     // Lazy load third-party scripts only when needed (Intersection Observer)
     document.addEventListener('DOMContentLoaded', function() {
         // Elfsight lazy loader
