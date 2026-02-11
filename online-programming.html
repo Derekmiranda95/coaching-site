@@ -56,13 +56,29 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
     
-    <!-- Google Analytics 4 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <!-- Google tag (gtag.js) - Google Ads Conversion Tracking -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y67FXGLTRY"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'G-XXXXXXXXXX');
+        gtag('config', 'G-Y67FXGLTRY');
+        
+        // Conversion tracking function for outbound clicks
+        function gtag_report_conversion(url) {
+          var callback = function () {
+            if (typeof(url) != 'undefined') {
+              window.location = url;
+            }
+          };
+          gtag('event', 'conversion', {
+              'send_to': 'AW-17772907822/a7FqCJ_dsvYbEK6a5JpC',
+              'value': 1.0,
+              'currency': 'USD',
+              'event_callback': callback
+          });
+          return false;
+        }
     </script>
     
     <!-- Schema.org Markup for Online Training -->
@@ -134,7 +150,7 @@
                 </div>
                 <p style="font-size: 0.9rem; margin-bottom: 18px; opacity: 0.95;">Everything included. Cancel anytime.</p>
                 
-                <a href="https://square.link/u/pbgYpbCB" target="_blank" style="display: block; background: white; color: #0066FF; padding: 14px 28px; border-radius: 50px; font-size: 1rem; font-weight: 700; text-decoration: none; box-shadow: 0 8px 20px rgba(0,0,0,0.25); transition: transform 0.2s ease;" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'">
+                <a href="https://square.link/u/pbgYpbCB" target="_blank" style="display: block; background: white; color: #0066FF; padding: 14px 28px; border-radius: 50px; font-size: 1rem; font-weight: 700; text-decoration: none; box-shadow: 0 8px 20px rgba(0,0,0,0.25); transition: transform 0.2s ease;" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'" onclick="return gtag_report_conversion('https://square.link/u/pbgYpbCB');">
                     Get Started Now
                 </a>
 
@@ -263,7 +279,7 @@
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; max-width: 1200px; margin: 0 auto;">
                 <!-- Image Column -->
                 <div>
-                    <img src="images/FBP7.webp" alt="Personal trainer demonstrating proper form to client" width="600" height="400" loading="lazy" decoding="async" style="width: 100%; border-radius: 20px; box-shadow: 0 20px 60px rgba(0,0,0,0.2);">
+                    <img src="images/FBP7.webp" alt="Personal trainer demonstrating proper form to client" width="600" height="400" loading="lazy" decoding="async" style="width: 100%; height: 400px; object-fit: cover; object-position: center 20%; border-radius: 20px; box-shadow: 0 20px 60px rgba(0,0,0,0.2);">
                 </div>
 
                 <!-- Content Column -->
@@ -515,7 +531,7 @@
             <p style="font-size: 1.3rem; margin-bottom: 40px; color: #E6F0FF;">
                 Join athletes training worldwide with FreeBody Performance programming
             </p>
-            <a href="https://square.link/u/pbgYpbCB" target="_blank" style="display: inline-block; background: white; color: #0066FF; padding: 25px 60px; border-radius: 50px; font-size: 1.5rem; font-weight: 700; text-decoration: none; box-shadow: 0 10px 40px rgba(0,0,0,0.3); transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+            <a href="https://square.link/u/pbgYpbCB" target="_blank" style="display: inline-block; background: white; color: #0066FF; padding: 25px 60px; border-radius: 50px; font-size: 1.5rem; font-weight: 700; text-decoration: none; box-shadow: 0 10px 40px rgba(0,0,0,0.3); transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" onclick="return gtag_report_conversion('https://square.link/u/pbgYpbCB');">
                 <i class="fas fa-rocket"></i> Get Started - $250/month
             </a>
             <p style="margin-top: 30px; font-size: 1rem; opacity: 0.9;">

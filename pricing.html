@@ -63,13 +63,29 @@
     <link rel="stylesheet" href="css/pricing.css?v=2">
     <link rel="stylesheet" href="css/pricing-carousel.css?v=2">
     
-    <!-- Google Analytics 4 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <!-- Google tag (gtag.js) - Google Ads Conversion Tracking -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y67FXGLTRY"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-XXXXXXXXXX');
+      gtag('config', 'G-Y67FXGLTRY');
+      
+      // Conversion tracking function for outbound clicks
+      function gtag_report_conversion(url) {
+        var callback = function () {
+          if (typeof(url) != 'undefined') {
+            window.location = url;
+          }
+        };
+        gtag('event', 'conversion', {
+            'send_to': 'AW-17772907822/a7FqCJ_dsvYbEK6a5JpC',
+            'value': 1.0,
+            'currency': 'USD',
+            'event_callback': callback
+        });
+        return false;
+      }
     </script>
 </head>
 <body>
@@ -213,7 +229,7 @@
                             <li><i class="fas fa-check"></i> Virtual training option</li>
                             <li><i class="fas fa-check"></i> Pause policy included</li>
                         </ul>
-                        <a href="https://square.link/u/xT7Ow0VR" target="_blank" class="btn btn-outline">Purchase 8-Pack</a>
+                        <a href="https://square.link/u/xT7Ow0VR" target="_blank" class="btn btn-outline" onclick="return gtag_report_conversion('https://square.link/u/xT7Ow0VR');">Purchase 8-Pack</a>
                     </div>
 
                     <!-- Card 2: Elite -->
@@ -240,7 +256,7 @@
                             <li><i class="fas fa-check"></i> Pause policy included</li>
                             <li><i class="fas fa-check"></i> <strong>Save $5/session</strong></li>
                         </ul>
-                        <a href="https://square.link/u/8YJqyoMQ" target="_blank" class="btn btn-primary">Purchase 12-Pack</a>
+                        <a href="https://square.link/u/8YJqyoMQ" target="_blank" class="btn btn-primary" onclick="return gtag_report_conversion('https://square.link/u/8YJqyoMQ');">Purchase 12-Pack</a>
                     </div>
 
                     <!-- Card 3: Drop-In Session -->
@@ -292,7 +308,7 @@
                             <li><i class="fas fa-info-circle"></i> No banking or auto-renewal</li>
                             <li><i class="fas fa-info-circle"></i> 12-hour cancellation policy</li>
                         </ul>
-                        <a href="https://square.link/u/dOhevMbp" target="_blank" class="btn btn-outline">Purchase Flex Pack</a>
+                        <a href="https://square.link/u/dOhevMbp" target="_blank" class="btn btn-outline" onclick="return gtag_report_conversion('https://square.link/u/dOhevMbp');">Purchase Flex Pack</a>
                     </div>
                 </div>
                 
@@ -377,7 +393,7 @@
                         <li><i class="fas fa-chart-line"></i> Serious about results</li>
                     </ul>
                     
-                    <a href="https://square.link/u/HYp29HV2" target="_blank" class="btn btn-primary">Purchase 12-Pack</a>
+                    <a href="https://square.link/u/HYp29HV2" target="_blank" class="btn btn-primary" onclick="return gtag_report_conversion('https://square.link/u/HYp29HV2');">Purchase 12-Pack</a>
                 </div>
 
                 <!-- Virtual 24 Pack -->
@@ -404,7 +420,7 @@
                         <li><i class="fas fa-star"></i> Premium value</li>
                     </ul>
                     
-                    <a href="https://square.link/u/nUGt0OG8" target="_blank" class="btn btn-primary">Purchase 24-Pack</a>
+                    <a href="https://square.link/u/nUGt0OG8" target="_blank" class="btn btn-primary" onclick="return gtag_report_conversion('https://square.link/u/nUGt0OG8');">Purchase 24-Pack</a>
                 </div>
             </div>
         </div>
