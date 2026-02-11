@@ -69,7 +69,7 @@
         gtag('js', new Date());
         gtag('config', 'G-Y67FXGLTRY');
         
-        // Conversion tracking function for outbound clicks
+        // Conversion tracking function for outbound clicks (Book Now / Purchase buttons)
         function gtag_report_conversion(url) {
           var callback = function () {
             if (typeof(url) != 'undefined') {
@@ -78,6 +78,22 @@
           };
           gtag('event', 'conversion', {
               'send_to': 'AW-17772907822/a7FqCJ_dsvYbEK6a5JpC',
+              'value': 1.0,
+              'currency': 'USD',
+              'event_callback': callback
+          });
+          return false;
+        }
+        
+        // Conversion tracking function for lead form submissions (Typeform)
+        function gtag_report_lead_conversion(url) {
+          var callback = function () {
+            if (typeof(url) != 'undefined') {
+              window.location = url;
+            }
+          };
+          gtag('event', 'conversion', {
+              'send_to': 'AW-17772907822/sa8SCKP96vYbEK6a5JpC',
               'value': 1.0,
               'currency': 'USD',
               'event_callback': callback
